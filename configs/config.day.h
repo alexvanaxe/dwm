@@ -15,5 +15,5 @@ static const char col_gray2[]       = "#8FA3D3"; //Border
 static const char col_gray3[]       = "#000000"; // Non selected font
 static const char col_gray4[]       = "#000000"; // Selected font
 static const char col_cyan[]        = "#F4FAFF"; // Title window
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xd0U;
 static const unsigned int borderalpha = OPAQUE;
