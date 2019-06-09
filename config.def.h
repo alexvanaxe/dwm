@@ -30,7 +30,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 #include "layouts.c"
 #include "fibonacci.c"
@@ -62,8 +62,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *powercontrol[]  = { "powercontrol.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *pomodoro[]  = { "pomodoro-client.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *spotifyctl[]  = { "spotifyctl.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *player_ctl[]  = { "player_ctl.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *avalight[]  = { "avalight", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dtodosh[]  = { "dtodosh.sh", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *lockscr[]  = { "lock.sh", NULL };
 
 static const char *upvol[]   = { "pulseaudio-ctl", "up", NULL };
@@ -82,9 +83,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_e,	   spawn,          {.v = powercontrol } },
 	{ MODKEY|ShiftMask,             XK_p,	   spawn,          {.v = pomodoro } },
-	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = spotifyctl } },
+	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = player_ctl } },
 	{ MODKEY|ShiftMask,             XK_l,	   spawn,          {.v = avalight } },
 	{ MODKEY|ShiftMask,             XK_x,	   spawn,          {.v = lockscr } },
+	{ MODKEY|ShiftMask,             XK_t,	   spawn,          {.v = dtodosh } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
