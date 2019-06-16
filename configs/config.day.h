@@ -8,8 +8,8 @@ static const unsigned int gappov    = 5;       /* vert outer gap between windows
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Envy Code R:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Monofur Nerd Font:size=10" };
+static const char dmenufont[]       = "Monofur Nerd Font:size=10";
 static const char col_gray1[]       = "#BBBBBF"; //Top bar
 static const char col_gray2[]       = "#8FA3D3"; //Border
 static const char col_gray3[]       = "#000000"; // Non selected font
