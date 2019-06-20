@@ -8,8 +8,8 @@ static const unsigned int gappov    = 5;       /* vert outer gap between windows
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "NotoSansDisplay Nerd Font:ExtraCondensed:size=10" };
-static const char dmenufont[]       = "NotoSansDisplay Nerd Font:ExtraCondensed:size=10";
+static const char *fonts[]          = { "TerminessTTF Nerd Font:Bold:size=10" };
+static const char dmenufont[]       = "TerminessTTF Nerd Font:size=11";
 static const char col_gray1[]       = "#05080F";  //Top bar
 static const char col_gray2[]       = "#372549";  //Border
 static const char col_gray3[]       = "#EAF2EF";  // Non selected font
