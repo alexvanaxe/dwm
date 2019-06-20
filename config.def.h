@@ -27,6 +27,7 @@ static const Rule rules[] = {
 	{ "Google-chrome",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "stalonetray",  NULL,       NULL,       1 << 6,       0,           -1 },
+	{ NULL,  NULL,       "weechat",       1 << 7,       0,           -1 },
 };
 
 /* layout(s) */
@@ -34,6 +35,7 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
+#include "selfrestart.c"
 #include "layouts.c"
 #include "fibonacci.c"
 #include "movestack.c"
@@ -131,6 +133,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
+	//My shortcuts
+	{ MODKEY,                 XK_F1, spawn,          SHCMD("st -e ranger") },
+	{ MODKEY,                 XK_F2, spawn,          SHCMD("st -e transmission-remote-cli") },
+	{ MODKEY,                 XK_F8, spawn,          SHCMD("st -e weechat") },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -141,6 +149,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask, 		XK_r,      self_restart,   {0} },
 };
 
 /* button definitions */
