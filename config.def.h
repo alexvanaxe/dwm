@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include <config.night.h>
+#include <config.day.h>
 
 /* appearance */
 static const char *colors[][3]      = {
@@ -24,6 +24,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "ffplay",     NULL,       NULL,       0,            1,           -1 },
 	{ "Google-chrome",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "stalonetray",  NULL,       NULL,       1 << 6,       0,           -1 },
@@ -138,6 +139,9 @@ static Key keys[] = {
 	{ MODKEY,                 XK_F1, spawn,          SHCMD("st -e ranger") },
 	{ MODKEY,                 XK_F2, spawn,          SHCMD("st -e transmission-remote-cli") },
 	{ MODKEY,                 XK_F8, spawn,          SHCMD("st -e weechat") },
+	{ MODKEY,                 XK_F5, spawn,          SHCMD("camera.sh") },
+	{ MODKEY,                 XK_F6, spawn,          SHCMD("screeneaudio.sh play") },
+	{ MODKEY|ShiftMask,       XK_F6, spawn,          SHCMD("screeneaudio.sh stop") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
