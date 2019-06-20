@@ -10,10 +10,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monofur Nerd Font:size=10" };
 static const char dmenufont[]       = "Monofur Nerd Font:size=10";
-static const char col_gray1[]       = "#BBBBBF"; //Top bar
+static const char col_gray1[]       = "#999999"; //Top bar
 static const char col_gray2[]       = "#8FA3D3"; //Border
 static const char col_gray3[]       = "#000000"; // Non selected font
 static const char col_gray4[]       = "#000000"; // Selected font
-static const char col_cyan[]        = "#F4FAFF"; // Title window
-static const unsigned int baralpha = 0xd0U;
+static const char col_cyan[]        = "#555555"; // Title window
+
+static const unsigned int baralpha = 0x00U; //00 more transparant ff is opaque
 static const unsigned int borderalpha = OPAQUE;
