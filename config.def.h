@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include <config.day.h>
+#include <config.night.h>
 
 /* appearance */
 static const char *colors[][3]      = {
