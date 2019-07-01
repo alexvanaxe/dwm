@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include <config.day.h>
+#include <config.tonight.h>
 
 /* appearance */
 static const char *colors[][3]      = {
@@ -68,6 +68,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *powercontrol[]  = { "powercontrol.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *pomodoro[]  = { "pomodoro-client.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *player_ctl[]  = { "player_ctl.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *play_radio[]  = { "play_radio.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *avalight[]  = { "avalight", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dtodosh[]  = { "dtodosh.sh", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *lockscr[]  = { "lock.sh", NULL };
@@ -89,6 +90,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_e,	   spawn,          {.v = powercontrol } },
 	{ MODKEY|ShiftMask,             XK_p,	   spawn,          {.v = pomodoro } },
 	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = player_ctl } },
+	{ MODKEY|ShiftMask,             XK_r,	   spawn,          {.v = play_radio } },
 	{ MODKEY|ShiftMask,             XK_l,	   spawn,          {.v = avalight } },
 	{ MODKEY|ShiftMask,             XK_x,	   spawn,          {.v = lockscr } },
 	{ MODKEY|ShiftMask,             XK_t,	   spawn,          {.v = dtodosh } },
@@ -154,7 +156,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ShiftMask, 		XK_r,      self_restart,   {0} },
 };
 
 /* button definitions */
