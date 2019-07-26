@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include <config.tonight.h>
+#include <config.day.h>
 
 /* appearance */
 static const char *colors[][3]      = {
@@ -71,6 +71,7 @@ static const char *player_ctl[]  = { "player_ctl.sh", "-fn",  dmenufont, "-nb", 
 static const char *play_radio[]  = { "play_radio.sh", "-fn",  dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *avalight[]  = { "avalight", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dtodosh[]  = { "dtodosh.sh", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *displayselect[]  = { "displayselect", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *lockscr[]  = { "lock.sh", NULL };
 
 static const char *upvol[]   = { "pulseaudio-ctl", "up", NULL };
@@ -94,6 +95,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,	   spawn,          {.v = avalight } },
 	{ MODKEY|ShiftMask,             XK_x,	   spawn,          {.v = lockscr } },
 	{ MODKEY|ShiftMask,             XK_t,	   spawn,          {.v = dtodosh } },
+	{ MODKEY|ShiftMask,             XK_m,	   spawn,          {.v = displayselect } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
