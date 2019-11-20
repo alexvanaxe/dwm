@@ -1,0 +1,1 @@
+cat config.def.h | grep MODKEY | sed 's/{//g' | sed 's/} },//g' | sed 's/) },//g' | sed 's/[[:space:]]//g' | awk '{print $1,$2,$3,$4}' FS=, | sed 's/MODKEY/WIN/g' | sed 's/|/+/g' | sed 's/Mod1Mask/Alt/g' | sed 's/ShiftMask/Shift/g' | sed 's/XK_//g' | column -t -s ' '
