@@ -142,7 +142,6 @@ static Key keys[] = {
 	//My shortcuts
 	{ MODKEY,                 XK_F1, spawn,          SHCMD("st -e ranger") },
 	{ MODKEY,                 XK_F2, spawn,          SHCMD("st -e transmission-remote-cli") },
-	{ MODKEY,                 XK_F3, spawn,          SHCMD("st -e joplin") },
 	{ MODKEY,                 XK_F8, spawn,          SHCMD("st -e weechat") },
 	{ MODKEY,                 XK_F5, spawn,          SHCMD("camera.sh") },
 	{ MODKEY,                 XK_F6, spawn,          SHCMD("screeneaudio.sh play") },
