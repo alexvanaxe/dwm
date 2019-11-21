@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include <config.day.h>
+#include <config.night.h>
 
 /* appearance */
 static const char *colors[][3]      = {
@@ -87,8 +87,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ 0,                            XK_Print,     spawn,          {.v = printscreen   } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } }, // Abre o dmenu
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, // Abre o terminal
 	{ MODKEY|ShiftMask,             XK_e,	   spawn,          {.v = powercontrol } },
 	{ MODKEY|ShiftMask,             XK_p,	   spawn,          {.v = pomodoro } },
 	{ MODKEY|ShiftMask,             XK_s,	   spawn,          {.v = player_ctl } },
